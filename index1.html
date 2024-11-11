@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Kurkure Packets</title>
+</head>
+<body>
+    <header>
+        <h1>Kurkure Snacks</h1>
+        <nav>
+            <ul class="nav-list">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#products">Products</a></li>
+                <li><a href="#cart">Cart</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="product-container" id="products">
+            <div class="product">
+                <img src="k1.jpg" alt="Kurkure Original" />
+                <h2>Kurkure Original</h2>
+                <p>Crunchy and spicy snack made from corn.</p>
+                <p class="price">500/-</p>
+                <button onclick="addToCart('Kurkure Original', 2)">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="k2.jpg" alt="Kurkure Masala" />
+                <h2>Kurkure Masala</h2>
+                <p>Delicious masala flavor that packs a punch!</p>
+                <p class="price">500/-</p>
+                <button onclick="addToCart('Kurkure Masala', 2)">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="k3.jpg" alt="Kurkure Mazedaar" />
+                <h2>Kurkure Mazedaar</h2>
+                <p>Extra crunchy with a tangy twist!</p>
+                <p class="price">500/-</p>
+                <button onclick="addToCart('Kurkure Mazedaar', 2)">Add to Cart</button>
+            </div>
+        </div>
+
+        <div class="cart-container" id="cart">
+            <h2>Your Cart</h2>
+            <ul id="cart-list"></ul>
+            <p id="total-price">Total: 500/-</p>
+            <button id="order-button" onclick="placeOrder()">Place Order</button>
+        </div>
+
+        <div class="contact-container" id="contact">
+            <h2>Contact Us</h2>
+            <p>If you have any questions, feel free to reach out to us!</p>
+            <p><strong>Email:</strong> spicy@kurkure.com</p>
+            <p><strong>Phone:</strong> +91 234 567 8900</p>
+            <p><strong>Address:</strong> 123 Snack Lane, Crunch City, Snackland</p>
+            <form id="contact-form" onsubmit="submitForm(event)">
+                <label for="name">Name:</label>
+                <input type="text" id="name" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" required>
+                <label for="message">Message:</label>
+                <textarea id="message" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+        <section id="todo" class="todo">
+            <div class="container">
+                <h2>To-Do List</h2>
+                <input type="text" id="todoInput" placeholder="Add a new task...">
+                <button onclick="addTask()">Add Task</button>
+                <ul id="todoList"></ul>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2023 Kurkure Snacks. All rights reserved.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
